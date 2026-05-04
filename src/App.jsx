@@ -145,7 +145,7 @@ function useBusinessData() {
   useEffect(() => {
     let alive = true;
 
-    fetch("/api/business")
+    fetch("https://vintage-cafe.onrender.com/api/business")
       .then((response) => {
         if (!response.ok) throw new Error("Business API unavailable");
         return response.json();
@@ -897,7 +897,7 @@ function OrderSection({ business }) {
     setOrderNumber("");
 
     try {
-      const response = await fetch("/api/orders", {
+      const response = await fetch("https://vintage-cafe.onrender.com/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1401,7 +1401,7 @@ function AdminLogin({ business, onLogin }) {
     setMessage("");
 
     try {
-      const response = await fetch("/api/admin/login", {
+      const response = await fetch("https://vintage-cafe.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1655,7 +1655,7 @@ function AdminPage({ business }) {
     }
 
     try {
-      const response = await fetch("/api/admin/orders", {
+      const response = await fetch("https://vintage-cafe.onrender.com/api/admin/orders", {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -1731,7 +1731,7 @@ function AdminPage({ business }) {
     setMessage("");
 
     try {
-      const response = await fetch(`/api/admin/orders/${encodeURIComponent(id)}/status`, {
+      const response = await fetch(`https://vintage-cafe.onrender.com/api/admin/orders/${encodeURIComponent(id)}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
