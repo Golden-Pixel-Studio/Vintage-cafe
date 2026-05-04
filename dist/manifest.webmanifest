@@ -1,0 +1,17 @@
+{
+  "name": "Vintage Cafe",
+  "short_name": "Vintage Cafe",
+  "description": "Premium cafe experience in Kondhwa Budruk, Pune.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#160E0B",
+  "theme_color": "#3E2723",
+  "icons": [
+    {
+      "src": "/vintage-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
